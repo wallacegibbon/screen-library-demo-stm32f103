@@ -1,7 +1,8 @@
 CROSS_COMPILER_PREFIX = arm-none-eabi-
 OPENOCD_PATH =
 OPENOCD = openocd
-OPENOCD_ARGS = -f interface/stlink.cfg -f target/stm32f1x.cfg
+#OPENOCD_ARGS = -f interface/stlink.cfg -f target/stm32f1x.cfg
+OPENOCD_ARGS = -f interface/cmsis-dap.cfg -f target/stm32f1x.cfg
 
 ## To change target name: `TARGET=xxx make`(unix only) or `make TARGET=xxx`
 TARGET = target
