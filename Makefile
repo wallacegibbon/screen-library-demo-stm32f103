@@ -4,9 +4,6 @@ OPENOCD = openocd
 #OPENOCD_ARGS = -f interface/stlink.cfg -f target/stm32f1x.cfg
 OPENOCD_ARGS = -f interface/cmsis-dap.cfg -f target/stm32f1x.cfg
 
-TARGET = target
-BUILD_DIR = build
-
 LIB_PERIPHERAL_DIR = $(HOME)/STM32_standard_peripheral_library/stm32f10x
 ARCH = -mcpu=cortex-m4 -mthumb
 
