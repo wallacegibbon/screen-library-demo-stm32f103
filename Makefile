@@ -1,11 +1,11 @@
-CROSS_COMPILER_PREFIX = arm-none-eabi-
-OPENOCD_PATH =
-OPENOCD = openocd
+CROSS_COMPILER_PREFIX = /usr/bin/arm-none-eabi-
+OPENOCD = /usr/local/bin/openocd
 #OPENOCD_ARGS = -f interface/stlink.cfg -f target/stm32f1x.cfg
 OPENOCD_ARGS = -f interface/cmsis-dap.cfg -f target/stm32f1x.cfg
 
-LIB_PERIPHERAL_DIR = $(HOME)/STM32_standard_peripheral_library/stm32f10x
 ARCH = -mcpu=cortex-m4 -mthumb
+
+LIB_PERIPHERAL_DIR = $(HOME)/STM32_standard_peripheral_library/stm32f10x
 
 CROSS_C_SOURCE_FILES += $(wildcard $(LIB_PERIPHERAL_DIR)/src/*.c)
 CROSS_C_SOURCE_FILES += $(wildcard ./src/screen-library-mcu/*.c)
